@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar-Nuevo-Cliente</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo InvenTrack" width="30" height="30" class="d-inline-block align-top">
+                InvenTrack
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="ayuda.html"><i class="fas fa-question-circle"></i> Ayuda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="inicio_sesion.html"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Alta de Nueva Compra</h2>
+        <form>
+            <!-- Datos de Identificación -->
+            <h4 class="mb-3">Datos del Cliente</h4>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombreCompleto" placeholder="Ejemplo: Juan Pérez Gómez">
+                </div>
+                <div class="col-md-4">
+                    <label for="correoElectronico" class="form-label">Correo Electrónico Registrado</label>
+                    <input type="email" class="form-control" id="correoElectronico" placeholder="Ejemplo: juan.perez@gmail.com">
+                </div>
+        
+            </div>
+
+    <!-- Contenedor Secundario -->
+    <div class="container mt-5">
+        <h2 class="text-center">Gestión de Articulos Adquiridos</h2>
+
+        <!-- Botón para agregar nueva articulo -->
+    <div class="text-right mb-4">
+        <a href="IngArituculo.html" class="btn btn-primary">Agregar Articulos</a>
+    </div>
+
+        <!-- Tabla de Compras -->
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>ID Articulo</th>
+                        <th>Nombre Articulo</th>
+                        <th>Cantidad</th>
+                        <th>Costo Unitario</th>
+                        <th>Impuesto Unitario</th>
+                        <th>Costo total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ejemplo de fila de proveedor -->
+                    <tr>
+                        <td>Ejmplo: 10</td>
+                        <td>Ejemplo: Plantillas</td>
+                        <td>Ejemplo: 7 </td>
+                        <td>Ejemplo: $50.00</td>
+                        <td>Ejemplo: $8.00</td>
+                        <td>Ejemplo: $358.00</td>
+                        <td>
+                            <button class="btn btn-info btn-sm">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                            <button class="btn btn-danger btn-sm" onclick="eliminarProveedor(1)">
+                                <i class="fas fa-trash"></i> Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+            <!-- Datos de Pago -->
+            <h4 class="mb-3">Datos de Pago</h4>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="calleNumero" class="form-label">Monto Bruto</label>
+                    <input type="text" class="form-control" id="calleNumero" placeholder="Ejemplo: 200.00 ">
+                </div>
+                <div class="col-md-4">
+                    <label for="colonia" class="form-label">Descuentos</label>
+                    <input type="text" class="form-control" id="colonia" placeholder="Ejemplo: .05 -> 5%" >
+                </div>
+                <div class="col-md-4">
+                    <label for="ciudad" class="form-label">Monto Neto</label>
+                    <input type="text" class="form-control" id="ciudad" placeholder="Ejemplo: 160.00">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="metodoPago" class="form-label">Método de Pago</label>
+                    <select class="form-select" id="metodoPago">
+                        <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="transferencia">Transferencia Bancaria</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col text-center">
+                        <a href="Compras.html" class="btn btn-success">
+                            <i class="fas fa-save"></i> Guardar Compra
+                          </a>
+                      </form>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda y Soporte - InvenTrack</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+        <!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Logo del sistema -->
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo InvenTrack" width="30" height="30" class="d-inline-block align-top">
+            InvenTrack
+        </a>
+        <!-- Botón de hamburguesa para dispositivos móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Opciones de la barra de navegación -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <!-- Botón de Inicio -->
+                <li class="nav-item">
+                    <a class="btn btn-outline-light ms-3" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                </li>
+                <!-- Botón de Ayuda -->
+                <li class="nav-item">
+                    <a class="btn btn-outline-light ms-3" href="ayuda.html"><i class="fas fa-question-circle"></i> Ayuda</a>
+                </li>
+                <!-- Botón de Inicio de Sesión -->
+                <li class="nav-item">
+                    <a class="btn btn-outline-light ms-3" href="inicio_sesion.html"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">Centro de Ayuda de InvenTrack</h1>
+
+    <!-- Barra de búsqueda -->
+    <div class="input-group mb-4">
+        <input type="text" class="form-control" placeholder="Buscar temas de ayuda..." aria-label="Buscar temas de ayuda">
+        <button class="btn btn-primary" type="button"><i class="fas fa-search"></i> Buscar</button>
+    </div>
+
+    <!-- Accordion para Preguntas Frecuentes -->
+    <div class="accordion" id="faqAccordion">
+        <!-- Pregunta 1 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    ¿Cómo inicio sesión en InvenTrack?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Para iniciar sesión, haga clic en el botón "Iniciar Sesión" en la barra de navegación y luego ingrese su nombre de usuario y contraseña en el formulario. Si olvidó su contraseña, puede restablecerla usando el enlace "¿Olvidaste tu contraseña?".
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pregunta 2 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    ¿Cómo puedo agregar un nuevo producto al inventario?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Para agregar un nuevo producto, vaya a la sección "Inventario" en el menú de navegación. Luego, haga clic en "Agregar Producto" y complete la información necesaria, como nombre, cantidad, proveedor, y categoría. Haga clic en "Guardar" para añadir el producto al inventario.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pregunta 3 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    ¿Cómo gestiono los proveedores en el sistema?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    En la sección "Proveedores", puede ver, editar, o eliminar proveedores existentes. Para añadir un nuevo proveedor, haga clic en "Agregar Proveedor" y complete la información necesaria como nombre, contacto y dirección. Guarde los cambios para actualizar la lista de proveedores.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Soporte -->
+    <div class="mt-5">
+        <h2 class="text-center">¿Necesitas ayuda adicional? Contáctanos</h2>
+        <p class="text-center text-muted">Describe tu problema y nuestro equipo de soporte se pondrá en contacto contigo lo antes posible.</p>
+        <form action="enviar_soporte.php" method="POST" class="row g-3">
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="col-md-6">
+                <label for="correo" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+            </div>
+            <div class="col-12">
+                <label for="asunto" class="form-label">Asunto</label>
+                <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Ej. Problema al iniciar sesión" required>
+            </div>
+            <div class="col-12">
+                <label for="mensaje" class="form-label">Descripción del Problema</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Describe el problema o pregunta" required></textarea>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar Solicitud de Soporte</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Bootstrap y Font Awesome JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
