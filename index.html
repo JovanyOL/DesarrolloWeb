@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvenTrack</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+     <style>
+        .hero-section 
+        {
+            background-image: url('imagen-de-inventario.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 200px 0;
+            text-align: center;
+        }
+        .hero-overlay 
+        {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+        }
+    </style>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Logo del sistema -->
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo InvenTrack" width="30" height="30" class="d-inline-block align-top">
+            InvenTrack
+        </a>
+        <!-- Botón de hamburguesa para dispositivos móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Opciones de la barra de navegación -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="btn btn-outline-light ms-3" href="inventario.html"><i class="fas fa-box"></i> Inventario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-light ms-3" href="proveedores.html"><i class="fas fa-truck"></i> Proveedores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-light ms-3" href="DicClientes.html"><i class="fas fa-users"></i> Clientes</a>
+                </li>
+                <!-- Botón de Compras -->
+                <li class="nav-item">
+                    <a class="btn btn-outline-light ms-3" href="Compras.html"><i class="fa-solid fa-cart-shopping"></i> Compras</a>
+                </li>
+                <!-- Botón de Soporte -->
+                <li class="nav-item">
+                    <a class="btn btn-outline-light ms-3" href="soporte.html"><i class="fas fa-headset"></i> Soporte</a>
+                </li>
+                <!-- Botón de Ayuda -->
+                <li class="nav-item">
+                    <a class="btn btn-outline-light ms-3" href="ayuda.html"><i class="fas fa-question-circle"></i> Ayuda</a>
+                </li>
+                <!-- Botón de Inicio de Sesión -->
+                <li class="nav-item">
+                    <a class="btn btn-outline-light ms-3" href="inicio_sesion.html"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="hero-section">
+    <div class="hero-overlay">
+        <h1 class="display-4">Optimiza tu Inventario con InvenTrack</h1>
+        <p class="lead">La gestión eficiente es la clave del éxito de tu negocio. Simplifica, organiza y toma control.</p>
+        <a href="aprende_mas.html" class="btn btn-primary btn-lg mt-4"><i class="fas fa-question-circle"></i> Aprende Más</a>
+    </div>
+</section>
+
+<!-- Bootstrap y Font Awesome JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

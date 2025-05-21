@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Proveedor - InvenTrack</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo InvenTrack" width="30" height="30" class="d-inline-block align-top">
+                InvenTrack
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="ayuda.html"><i class="fas fa-question-circle"></i> Ayuda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="inicio_sesion.html"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formulario de Alta de Proveedor -->
+    <div class="container mt-5">
+        <h2 class="text-center">Alta de Nuevo Proveedor</h2>
+        <form action="guardar_proveedor.php" method="post">
+            <div class="row">
+                <!-- ID Proveedor -->
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="idProveedor">ID Proveedor</label>
+                        <input type="text" class="form-control" id="idProveedor" name="idProveedor" placeholder="Ej. 001" required>
+                    </div>
+                </div>
+                <!-- Nombre -->
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. Proveedor ABC" required>
+                    </div>
+                </div>
+                <!-- Correo Electrónico -->
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo" name="correo" placeholder="Ej. correo@ejemplo.com" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <!-- Domicilio -->
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="domicilio">Domicilio</label>
+                        <input type="text" class="form-control" id="domicilio" name="domicilio" placeholder="Ej. Calle Principal 123" required>
+                    </div>
+                </div>
+                <!-- Teléfono -->
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ej. +123456789" required>
+                    </div>
+                </div>
+                <!-- Fecha de Registro -->
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="fechaRegistro">Fecha de Registro</label>
+                        <input type="date" class="form-control" id="fechaRegistro" name="fechaRegistro" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <!-- Localidad -->
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="localidad">Localidad</label>
+                        <select class="form-control" id="localidad" name="localidad" required>
+                            <option value="01">Localidad 01</option>
+                            <option value="02">Localidad 02</option>
+                            <option value="03">Localidad 03</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Código Postal -->
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="codigoPostal">Código Postal</label>
+                        <input type="text" class="form-control" id="codigoPostal" name="codigoPostal" placeholder="Ej. 12345" required>
+                    </div>
+                </div>
+                <!-- Estado -->
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select class="form-control" id="estado" name="estado" required>
+                            <option value="Activo">Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- Botón para agregar proveedor -->
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Agregar Proveedor</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

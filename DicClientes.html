@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio de Clientes - InvenTrack</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo InvenTrack" width="30" height="30" class="d-inline-block align-top">
+                InvenTrack
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="ayuda.html"><i class="fas fa-question-circle"></i> Ayuda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="inicio_sesion.html"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="container mt-5">
+        <h2 class="text-center">Directorio de Clientes</h2>
+
+        <!-- Campo de búsqueda -->
+        <div class="mb-4">
+            <input type="text" class="form-control" id="buscarCliente" placeholder="Buscar cliente...">
+        </div>
+
+        <!-- Botón para agregar nuevo cliente -->
+    <div class="text-right mb-4">
+        <a href="clientes.html" class="btn btn-primary">Agregar Nuevo Cliente</a>
+    </div>
+
+        <!-- Tabla de clientes -->
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                        <th>Dirección</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ejemplo de fila de cliente -->
+                    <tr>
+                        <td>1</td>
+                        <td>Cliente Ejemplo</td>
+                        <td>+123456789</td>
+                        <td>cliente@ejemplo.com</td>
+                        <td>Calle Ejemplo 123</td>
+                        <td>
+                            <button class="btn btn-info btn-sm">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                            <button class="btn btn-danger btn-sm" onclick="eliminarCliente(1)">
+                                <i class="fas fa-trash"></i> Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Cliente Ejemplo</td>
+                        <td>+123456789</td>
+                        <td>cliente@ejemplo.com</td>
+                        <td>Calle Ejemplo 123</td>
+                        <td>
+                            <button class="btn btn-info btn-sm">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                            <button class="btn btn-danger btn-sm" onclick="eliminarCliente(2)">
+                                <i class="fas fa-trash"></i> Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Cliente Ejemplo</td>
+                        <td>+123456789</td>
+                        <td>cliente@ejemplo.com</td>
+                        <td>Calle Ejemplo 123</td>
+                        <td>
+                            <button class="btn btn-info btn-sm">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                            <button class="btn btn-danger btn-sm" onclick="eliminarCliente(3)">
+                                <i class="fas fa-trash"></i> Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Cliente Ejemplo</td>
+                        <td>+123456789</td>
+                        <td>cliente@ejemplo.com</td>
+                        <td>Calle Ejemplo 123</td>
+                        <td>
+                            <button class="btn btn-info btn-sm">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                            <button class="btn btn-danger btn-sm" onclick="eliminarCliente(4)">
+                                <i class="fas fa-trash"></i> Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Script para búsqueda -->
+    <script>
+        document.getElementById('buscarCliente').addEventListener('input', function () {
+            let filter = this.value.toLowerCase();
+            let rows = document.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                let text = row.innerText.toLowerCase();
+                row.style.display = text.includes(filter) ? '' : 'none';
+            });
+        });
+
+        function eliminarCliente(id) {
+            if (confirm("¿Estás seguro de que deseas eliminar este cliente?")) {
+                // Aquí podrías hacer una llamada AJAX al backend para eliminar
+                alert(`Cliente con ID ${id} eliminado.`);
+                location.reload(); // Temporalmente recargamos la página
+            }
+        }
+    </script>
+</body>
+</html>

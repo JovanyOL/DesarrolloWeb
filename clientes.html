@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar-Nuevo-Cliente</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo InvenTrack" width="30" height="30" class="d-inline-block align-top">
+                InvenTrack
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="ayuda.html"><i class="fas fa-question-circle"></i> Ayuda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-3" href="inicio_sesion.html"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Alta de Nuevo Cliente</h2>
+        <form>
+            <!-- Datos de Identificación -->
+            <h4 class="mb-3">Datos de Identificación del Cliente</h4>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombreCompleto" placeholder="Ejemplo: Juan Pérez Gómez">
+                </div>
+                <div class="col-md-4">
+                    <label for="correoElectronico" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="correoElectronico" placeholder="Ejemplo: juan.perez@gmail.com">
+                </div>
+                <div class="col-md-4">
+                    <label for="telefonoContacto" class="form-label">Teléfono de Contacto</label>
+                    <input type="text" class="form-control" id="telefonoContacto" placeholder="Ejemplo: +52 55 1234 5678">
+                </div>
+            </div>
+
+            <!-- Datos de Envío -->
+            <h4 class="mb-3">Datos de Envío</h4>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="calleNumero" class="form-label">Calle y Número</label>
+                    <input type="text" class="form-control" id="calleNumero" placeholder="Ejemplo: Av. Revolución 123">
+                </div>
+                <div class="col-md-4">
+                    <label for="colonia" class="form-label">Colonia</label>
+                    <input type="text" class="form-control" id="colonia" placeholder="Ejemplo: San Ángel">
+                </div>
+                <div class="col-md-4">
+                    <label for="ciudad" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="ciudad" placeholder="Ejemplo: Ciudad de México">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="estado" class="form-label">Estado</label>
+                    <input type="text" class="form-control" id="estado" placeholder="Ejemplo: CDMX">
+                </div>
+                <div class="col-md-4">
+                    <label for="codigoPostal" class="form-label">Código Postal</label>
+                    <input type="text" class="form-control" id="codigoPostal" placeholder="Ejemplo: 01000">
+                </div>
+                <div class="col-md-4">
+                    <label for="pais" class="form-label">País</label>
+                    <input type="text" class="form-control" id="pais" placeholder="Ejemplo: México">
+                </div>
+            </div>
+
+            <!-- Datos de Pago -->
+            <h4 class="mb-3">Datos de Pago</h4>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="metodoPago" class="form-label">Método de Pago</label>
+                    <select class="form-select" id="metodoPago">
+                        <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="transferencia">Transferencia Bancaria</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Agregar Cliente</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
